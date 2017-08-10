@@ -1,0 +1,131 @@
+doctype html
+html(lang='en')
+
+  head
+    title Greg Holden
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+
+  body#top(data-spy='scroll' data-target='.navbar' data-offset='50')
+
+    // Navigation Bar
+    nav.navbar.fixed-top.navbar-toggleable-sm.navbar-inverse
+      div.container#nav-container
+        button.navbar-toggler.navbar-toggler-right(
+          type='button'
+          data-toggle='collapse'
+          data-target='#navbarNav'
+          aria-controls='navbarNav'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        )
+          span.navbar-toggler-icon
+        div.collapse.navbar-collapse#navbarNav
+
+          // Site Logo
+          div.navbar-header
+            a.navbar-brand(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
+          
+          // Nav Links
+          ul.nav.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='#about') About Me
+            li.nav-item
+              a.nav-link(href='#portfolio') Portfolio
+            li.nav-item
+              a.nav-link(href='#contact') Contact
+
+    // Jumbotron
+    div.jumbotron.jumbotron-fluid.text-center
+      h1.title: strong Greg Holden
+      hr
+      h3 Web Developer
+      a(href='https://github.com/gregrholden'): i.fa.fa-github-square(aria-hidden='false')
+      a(href='https://twitter.com/ifDevReturnTrue'): i.fa.fa-twitter-square(aria-hidden='false')
+      a(href='https://www.facebook.com/gregrholden'): i.fa.fa-facebook-official(aria-hidden='false')
+      a(href='https://www.linkedin.com/in/gregrholden'): i.fa.fa-linkedin-square(aria-hidden='false')
+
+    // About Me Section
+    div.wrapper#about
+      section.container
+        h1 About Me
+        div.row.about-article
+          div.col--left
+            // Headshot
+            img.about-article__img(src='' alt='Greg Holden')
+          div.col--right I'm a professional writer and editor who transitioned into tech. I have a degree in software development, a decade of experience on the content and marketing side of websites and social media, and a diverse set of skills ranging across entire stacks. I am university trained in Java SE8 and EE7 (JSF, JDBC, servlets) and relational databases (primarily Oracle and MySQL), and self-taught in web development, specializing in core web tech: HTML5/CSS3/JS as well as automated tooling with Gulp, version control with Git/GitHub, modern stylesheet management with PostCSS, and modern HTML markup with Pug. My current project is to learn and master React.
+
+    // Portfolio
+    div.wrapper.wrapper--blue#portfolio
+      section.container
+        h1.portfolio__title Portfolio
+        div.row
+          div.col--left
+            img.img-responsive.rounded(src='' alt='')
+            img.img-responsive.rounded(src='' alt='')
+          div.col--right
+            img.img-responsive.rounded(src='' alt='')
+            img.img-responsive.rounded(src='' alt='')
+    
+    // Location Map & Contact Form
+    div.container#contact
+      div.wrapper
+        h1 Contact
+        div.row
+          div#map-canvas.col--left
+          script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' type='text/javascript')
+          div.col--right
+            form(
+              action="mailto:gregrholden@gmail.com"
+              method="POST"
+              name="contat-form"
+              )
+              div.form-group
+              input(
+                type='text'
+                class='form-control'
+                id='fname'
+                placeholder="First Name"
+                )
+              input(
+                type='text'
+                class='form-control'
+                id='lname'
+                placeholder="Last Name"
+                )
+              input(
+                type='email'
+                class='form-control'
+                id='email'
+                placeholder="Email"
+                )
+              input(
+                type='tel'
+                class='form-control'
+                id='phone'
+                placeholder="Phone Number"
+                )
+              input(
+                type='submit'
+                class='btn btn-primary'
+                id='submit'
+                value="Submit"
+                )
+                
+    // Footer
+    footer
+      div.container
+        div.row
+          div.col-4
+            // Copyright
+            p.left.small &copy; Greg Holden, 2017
+          div.col-4
+            p.center
+              a(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
+          div.col-4
+            p.right
+              a(href='https://github.com/gregrholden'): i.fa.fa-github-square(aria-hidden='false')
+              a(href='https://twitter.com/ifDevReturnTrue'): i.fa.fa-twitter-square(aria-hidden='false')
+              a(href='https://www.facebook.com/gregrholden'): i.fa.fa-facebook-official(aria-hidden='false')
+              a(href='https://www.linkedin.com/in/gregrholden'): i.fa.fa-linkedin-square(aria-hidden='false')

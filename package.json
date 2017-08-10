@@ -1,0 +1,25 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "author": "Greg Holden",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
+    "postcss-processor-order": "^0.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^10.0.0",
+    "postcss-mixins": "^6.0.1",
+    "postcss-nested": "^2.1.0",
+    "postcss-simple-vars": "^4.0.0"
+  }
+}

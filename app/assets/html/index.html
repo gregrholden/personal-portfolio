@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Greg Holden</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Navigation Bar-->
+    <nav class="navbar fixed-top navbar-toggleable-sm navbar-inverse">
+      <div class="container" id="nav-container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Site Logo-->
+          <div class="navbar-header"><a class="navbar-brand" href="#top">Greg <i class="fa fa-code" aria-hidden="true"></i></a></div>
+          <!-- Nav Links-->
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Jumbotron-->
+    <div class="jumbotron jumbotron-fluid text-center">
+      <h1 class="title"><strong>Greg Holden</strong></h1>
+      <hr>
+      <h3>Web Developer</h3><a href="https://github.com/gregrholden"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a>
+    </div>
+    <!-- About Me Section-->
+    <div class="wrapper" id="about">
+      <section class="container">
+        <h1>About Me</h1>
+        <div class="row about-article">
+          <div class="col--left">
+            <!-- Headshot--><img class="about-article__img" src="" alt="Greg Holden">
+          </div>
+          <div class="col--right">I'm a professional writer and editor who transitioned into tech. I have a degree in software development, a decade of experience on the content and marketing side of websites and social media, and a diverse set of skills ranging across entire stacks. I am university trained in Java SE8 and EE7 (JSF, JDBC, servlets) and relational databases (primarily Oracle and MySQL), and self-taught in web development, specializing in core web tech: HTML5/CSS3/JS as well as automated tooling with Gulp, version control with Git/GitHub, modern stylesheet management with PostCSS, and modern HTML markup with Pug. My current project is to learn and master React.</div>
+        </div>
+      </section>
+    </div>
+    <!-- Portfolio-->
+    <div class="wrapper wrapper--blue" id="portfolio">
+      <section class="container">
+        <h1 class="portfolio__title">Portfolio</h1>
+        <div class="row">
+          <div class="col--left"><img class="img-responsive rounded" src="" alt=""><img class="img-responsive rounded" src="" alt=""></div>
+          <div class="col--right"><img class="img-responsive rounded" src="" alt=""><img class="img-responsive rounded" src="" alt=""></div>
+        </div>
+      </section>
+    </div>
+    <!-- Location Map & Contact Form-->
+    <div class="container" id="contact">
+      <div class="wrapper">
+        <h1>Contact</h1>
+        <div class="row">
+          <div class="col--left" id="map-canvas"></div>
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" type="text/javascript"></script>
+          <div class="col--right">
+            <form action="mailto:gregrholden@gmail.com" method="POST" name="contat-form">
+              <div class="form-group"></div>
+              <input class="form-control" type="text" id="fname" placeholder="First Name">
+              <input class="form-control" type="text" id="lname" placeholder="Last Name">
+              <input class="form-control" type="email" id="email" placeholder="Email">
+              <input class="form-control" type="tel" id="phone" placeholder="Phone Number">
+              <input class="btn btn-primary" type="submit" id="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <!-- Copyright-->
+            <p class="left small">&copy; Greg Holden, 2017</p>
+          </div>
+          <div class="col-4">
+            <p class="center"><a href="#top">Greg <i class="fa fa-code" aria-hidden="true"></i></a></p>
+          </div>
+          <div class="col-4">
+            <p class="right"><a href="https://github.com/gregrholden"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
