@@ -8,7 +8,7 @@ gulp.task('watch', function() {
   browserSync.init({
     notify: false,
     server: {
-      baseDir: "app/assets/html"
+      baseDir: "app"
     }
   });
 
@@ -23,7 +23,7 @@ gulp.task('watch', function() {
   });
 
   // watch for changes to CSS files
-  gulp.watch('./app/assets/styles/**/*.css', function() {
+  gulp.watch('./app/src/styles/**/*.css', function() {
     gulp.start('cssInject');
   });
 
@@ -34,7 +34,7 @@ gulp.task('watch', function() {
 
   // The cssInject function
   gulp.task('cssInject', ['styles'], function() {
-    return gulp.src('./dist/styles/styles.css')
+    return gulp.src('./app/assets/styles/styles.css')
       .pipe(browserSync.stream());
   });
 });

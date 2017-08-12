@@ -1,0 +1,15 @@
+footer {
+  padding: 50px 0;
+  font-size: 2rem;
+  background-color: $mainBlue;
+  p {
+    color: #FFF;
+    a {
+      color: #FFF;
+      &:hover {
+        text-decoration: none;
+        color: $mainYellow;
+      }
+    }
+  }
+}

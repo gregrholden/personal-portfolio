@@ -1,0 +1,28 @@
+.title {
+  color: #333;
+  text-align: center;
+  font-size: 3.33rem;
+  margin-bottom: 25px;
+  font-weight: 400;
+
+  &--main {
+    font-size: 3.75rem;
+  }
+
+  &--white {
+    color: #FFF;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    &__links {
+      text-align: center;
+      margin-top: -25px;
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+}

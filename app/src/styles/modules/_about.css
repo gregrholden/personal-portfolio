@@ -1,0 +1,53 @@
+/*About Me section*/
+#about {
+  background-color: #FFF;
+  width: 100%;
+}
+
+.about-article {
+  font-size: 1rem;
+  .col--left {
+    img {
+      width: 100%;
+    }
+  }
+  .col--right {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @mixin smallScreen {
+    font-size: 1.2rem;
+  }
+  @mixin mediumScreen {
+    .col--left {
+      width: 50%;
+      img {
+        width: 90%;
+        max-width: 500px;
+        transform: translateY(5%);
+      }
+    }
+    .col--right {
+      text-align: left;
+      width: 45%;
+      margin-right: 35px;
+    }
+  }
+  @mixin largeScreen {
+    font-size: 1.4rem;
+    .col--right {
+      transform: translateY(5%);
+    }
+  }
+  @mixin fullScreen {
+    font-size: 1.6rem;
+    .col--left {
+      img {
+        width: 75%;
+        transform: translateX(15%);
+      }
+    }
+  }
+}

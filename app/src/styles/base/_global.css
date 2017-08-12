@@ -1,0 +1,22 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $mainBlue;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  background-color: $lightBlue;
+}
+
+* {
+  box-sizing: border-box;
+}

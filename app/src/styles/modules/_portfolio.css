@@ -1,0 +1,10 @@
+#portfolio {
+  img {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #333;
+    &:hover {
+      box-shadow: 0 0 10px $mainBlue;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.wrapper {
+  margin: 0;
+  padding: 95px 0;
+  &--blue {
+    background-color: $lightBlue;
+  }
+}

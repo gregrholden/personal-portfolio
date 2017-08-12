@@ -1,0 +1,10 @@
+#map-canvas {
+  margin: 0 auto;
+  height: 350px;
+  border: 1px solid $mainBlue;
+  box-shadow: 0 0 10px $mainBlue;
+  max-width: 500px;
+  &:hover {
+    box-shadow: 0 0 10px $lightBlue;
+  }
+}

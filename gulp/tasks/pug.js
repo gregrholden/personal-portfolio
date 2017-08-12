@@ -13,5 +13,5 @@ gulp.task('pug', function() {
         message: err.message
       }
     }))
-    .pipe(gulp.dest('./app/assets/html/'))
+    .pipe(gulp.dest('./app'))
 });

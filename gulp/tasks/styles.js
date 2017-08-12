@@ -6,16 +6,16 @@ nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
 hexrgba = require('postcss-hexrgba'),
 cssNext = require('postcss-cssnext'),
-mixins = require('postcss-mixins'),
-order = require('postcss-processor-order');
+mixins = require('postcss-mixins');
 
-var options = [order, cssImport, mixins, cssVars, nested, hexrgba, cssNext, autoprefixer];
+//var options = [order, cssImport, mixins, cssVars, nested, hexrgba, cssNext, autoprefixer];
 
 gulp.task('styles', function() {
-  return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss(options))
+  return gulp.src('./app/src/styles/styles.css')
+    .pipe(postcss([cssImport, mixins, cssVars, nested, hexrgba, autoprefixer]))
     .on('error', function(errorInfo) {
+      console.log(errorInfo.toString());
       this.emit('end');
     })
-    .pipe(gulp.dest('./dist/assets/styles'));
+    .pipe(gulp.dest('./app/assets/styles'));
 });
