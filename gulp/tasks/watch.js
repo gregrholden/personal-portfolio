@@ -27,14 +27,25 @@ gulp.task('watch', function() {
     gulp.start('cssInject');
   });
 
-  // refresh browser when changes made to .pug files
-  gulp.task('htmlRefresh', ['pug'], function() {
-    browserSync.reload();
+  // watch for changes to JavaScripts
+  watch('./app/src/scripts/**/*.js', function() {
+    gulp.start('scriptsRefresh');
   });
 
-  // The cssInject function
-  gulp.task('cssInject', ['styles'], function() {
-    return gulp.src('./app/assets/styles/styles.css')
-      .pipe(browserSync.stream());
-  });
+});
+
+// refresh browser when changes made to .pug files
+gulp.task('htmlRefresh', ['pug'], function() {
+  browserSync.reload();
+});
+
+// Stream changes made to CSS files
+gulp.task('cssInject', ['styles'], function() {
+  return gulp.src('./app/assets/styles/styles.css')
+    .pipe(browserSync.stream());
+});
+
+// reload page when changes made to JavaScripts
+gulp.task('scriptsRefresh', ['scripts'], function() {
+  browserSync.reload();
 });
