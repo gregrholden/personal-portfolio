@@ -10446,11 +10446,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)('#icon').on('click', function () {
   if ((0, _jquery2.default)('.primary-nav').hasClass('visibleMenu')) {
-    (0, _jquery2.default)('#icon').removeClass('visibleMenu');
+    (0, _jquery2.default)('.primary-nav').removeClass('visibleMenu');
     (0, _jquery2.default)('.primary-nav li').css({
       "display": "none",
       "float": "left",
       "margin-right": "25px"
+    });
+    (0, _jquery2.default)('.primary-nav li a').css({
+      "display": "block"
     });
   } else {
     (0, _jquery2.default)('.primary-nav').addClass('visibleMenu');

@@ -5,9 +5,10 @@ html(lang='en')
     title Greg Holden
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
+    // build:css src/styles/styles.css
     link(rel='stylesheet' href='assets/styles/styles.css')
-
-  body#top
+    // endbuild
+  body#top 
     header.container
       // Navigation Bar
       nav.primary-nav#navbar
@@ -160,8 +161,9 @@ html(lang='en')
         a(href='https://www.linkedin.com/in/gregrholden')
           i.fa.fa-linkedin-square(aria-hidden='false')
     
-    
+    // build:js src/scripts/App.js
     script(src="/assets/scripts/App.js")
+    // endbuild
     
     // scrollReveal.js
     // Issues exist with integrating ScrollReveal.js with webpack
