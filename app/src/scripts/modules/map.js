@@ -11,7 +11,7 @@ if ($('#map-canvas')){
     zoom: 9,
     center: myLatlng,
     scrollwheel: false,
-    draggable: false,
+    draggable: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   // Attach map to DOM

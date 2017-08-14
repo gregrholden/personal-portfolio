@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Greg Holden </title>
+    <title>Greg Holden</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <script src="/temp/scripts/Vendor.js"></script>
   </head>
   <body id="top">
     <header class="container">
-      <!-- Navigation Bar -->
-      <nav class="primary-nav">
-        <!-- Site Logo-->
-        <div class="primary-nav__logo"><a href="#top">Greg <i class="fa fa-code" aria-hidden="true"></i></a></div>
-        <!-- Nav Links-->
-        <ul class="primary-nav__links">
-          <li><a id="contact-link" href="#contact">Contact</a></li>
-          <li><a id="portfolio-link" href="#portfolio">Portfolio</a></li>
+      <!-- Navigation Bar-->
+      <nav class="primary-nav" id="navbar">
+        <!-- Logo-->
+        <div class="primary-nav__logo"><a id="logo" href="#top">Greg <i class="fa fa-code" aria-hidden="true"></i></a></div>
+        <ul class="primary-nav__links"> 
+          <!-- Mobile Menu Button--><a id="icon" href="javascript:void(0)">&#9776;</a>
+          <!-- Nav Links-->
           <li><a id="about-link" href="#about">About Me</a></li>
+          <li><a id="portfolio-link" href="#portfolio">Portfolio</a></li>
+          <li><a id="contact-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <!-- Jumbotron/Header-->
-    <div class="jumbotron">
+    <div class="wrapper jumbotron">
       <!-- Title-->
       <h1 class="title title--main title--white">Greg Holden</h1>
       <hr>
       <!-- Subtitle-->
       <h3 class="title__subtitle">Web Developer</h3>
       <!-- Social Media Links-->
-      <div class="title__subtitle__links"><a href="https://github.com/gregrholden"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a></div>
+      <div class="title__subtitle__links"><a href="https://github.com/gregrholden" target="_blank"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue" target="_blank"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden" target="_blank"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a></div>
     </div>
     <!-- About Me Section-->
     <div class="wrapper" id="about">
@@ -55,39 +55,55 @@
     <!-- Portfolio-->
     <div class="wrapper wrapper--blue" id="portfolio">
       <h1 class="title title--white">Portfolio</h1>
-      <div class="row">
-        <div class="col--left"><img class="img-responsive rounded" src="" alt=""><img class="img-responsive rounded" src="" alt=""></div>
-        <div class="col--right"><img class="img-responsive rounded" src="" alt=""><img class="img-responsive rounded" src="" alt=""></div>
+      <div class="portfolio">
+        <div class="col--third"><a href="#portfolio" title="Digitalization Project Site for nonprofit"><img class="portfolio__img" src="/assets/images/digitalization-IRI.jpg" alt="Digitalization Project Site for nonprofit"></a></div>
+        <div class="col--third"><a href="#portfolio" title="Site for Painter Lilach Cohen-Holden"><img class="portfolio__img" src="/assets/images/lilach-artist-site.jpg" alt="Site for Painter Lilach Cohen-Holden"></a></div>
+        <div class="col--third"><a href="#portfolio" title="Site for research meeting for nonprofit"><img class="portfolio__img" src="/assets/images/research-remix-IRI.jpg" alt="Site for research meeting for nonprofit"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/zdGqjq/" target="_blank" title="Pomodoro Clock App"><img class="portfolio__img" src="/assets/images/pomodoro-clock.png" alt="Pomodoro Clock App"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/owVZVv/" target="_blank" title="JavaScript Calculator App"><img class="portfolio__img" src="/assets/images/calculator.png" alt="JavaScript Calculator App"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/VWzQwd/" target="_blank" title="Local Weather App"> <img class="portfolio__img" src="/assets/images/local-weather.jpg" alt="Local Weather App"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/ZyRzKR/" target="_blank" title="Twitch TV Stream App"><img class="portfolio__img" src="/assets/images/twitch-streams.png" alt="Twitch TV Stream App"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/YQOJgo/" target="_blank" title="Wikipedia Viewer App"><img class="portfolio__img" src="/assets/images/wiki-viewer.png" alt="Wikipedia Viewer App"></a></div>
+        <div class="col--third"><a href="https://codepen.io/gregrholden/full/OgpZGM/" target="_blank" title="Random Quote Generator App"><img class="portfolio__img" src="/assets/images/random-quote-generator.png" alt="Random Quote Generator App"></a></div>
       </div>
     </div>
     <!-- My Location & Contact Form-->
     <div class="wrapper" id="contact">
       <h1 class="title">Contact</h1>
-      <div class="row">
+      <div class="row contact-and-map-area">
         <div class="col--left" id="map-canvas"></div>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" type="text/javascript"></script>
-        <div class="col--right">
-          <form action="mailto:gregrholden@gmail.com" method="POST" name="contat-form">
+        <div class="col--right contact-form">
+          <form action="mailto:gregrholden@gmail.com" method="POST" name="contact-form">
             <div class="form-group"></div>
-            <input class="form-control" type="text" id="fname" placeholder="First Name">
-            <input class="form-control" type="text" id="lname" placeholder="Last Name">
-            <input class="form-control" type="email" id="email" placeholder="Email">
-            <input class="form-control" type="tel" id="phone" placeholder="Phone Number">
+            <input class="form-control" type="text" id="fname" placeholder="First Name"><br>
+            <input class="form-control" type="text" id="lname" placeholder="Last Name"><br>
+            <input class="form-control" type="email" id="email" placeholder="Email" required><br>
+            <input class="form-control" type="tel" id="phone" placeholder="Phone Number"><br>
             <input class="btn btn-primary" type="submit" id="submit" value="Submit">
           </form>
         </div>
       </div>
     </div>
     <!-- Footer-->
-    <footer>
-      <div class="col__copyright">
+    <footer class="footer">
+      <div class="footer__copyright">
         <p>&copy; Greg Holden 2017</p>
       </div>
-      <div class="col__footer-logo">
+      <div class="footer__logo">
         <p><a href="#top">Greg <i class="fa fa-code" aria-hidden="true"></i></a></p>
       </div>
-      <div class="col__sm-icons"><a href="https://github.com/gregrholden"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a></div>
+      <div class="footer__sm-icons"><a href="https://github.com/gregrholden"><i class="fa fa-github-square" aria-hidden="false"></i></a><a href="https://twitter.com/ifDevReturnTrue"><i class="fa fa-twitter-square" aria-hidden="false"></i></a><a href="https://www.facebook.com/gregrholden"><i class="fa fa-facebook-official" aria-hidden="false"></i></a><a href="https://www.linkedin.com/in/gregrholden"><i class="fa fa-linkedin-square" aria-hidden="false"></i></a></div>
     </footer>
+    <script src="/assets/scripts/App.js"></script>
+    <!-- scrollReveal.js-->
+    <!-- Issues exist with integrating ScrollReveal.js with webpack-->
+    <!-- which is why I chose to include it in a script tag on this page-->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.portfolio__img');
+      sr.reveal('.about-article__img');
+    </script>
   </body>
-  <script src="/assets/scripts/App.js"></script>
 </html>

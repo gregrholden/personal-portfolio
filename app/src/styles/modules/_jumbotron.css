@@ -1,7 +1,10 @@
 .jumbotron {
   background-color: $mainBlue;
   color: #FFF;
-  padding: 250px 100px;
+  padding: 150px 100px;
+  @mixin mediumScreen {
+    padding: 250px 100px;
+  }
   i {
     margin-top: 3px;
     padding: 2.5px;

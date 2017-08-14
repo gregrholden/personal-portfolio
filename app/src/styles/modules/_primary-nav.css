@@ -1,59 +1,61 @@
 .container .primary-nav {
   background-color: rgba($mainBlue, 1);
-  z-index: 1100;
+  z-index: 10;
 }
 
 .primary-nav {
   position: fixed;
   padding-top: 10px;
+  padding-bottom: 10px;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-
-  @mixin mediumScreen {
-    padding-top: 0;
-  }
-
-  &__links {
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-      display: inline-block;
-      padding-right: 7px;
-      float: right;
-      @mixin mediumScreen {
-        padding-right: 20px;
+  width: 100%; 
+  li {
+    display: none;
+    @mixin mediumScreen {
+      display: inline;
+      float: left;
+      margin-right: 25px;
+      a {
         display: block;
       }
     }
-    li:last-child {
-      padding-right: 0;
-      @mixin mediumScreen {
-        padding-right: 20px;
-      }
+  }
+  #icon {
+    position: absolute;
+    right: 0;
+    display: block;
+    font-size: 1.25rem;
+    margin-right: 25px;
+    @mixin mediumScreen {
+      display: none;
     }
   }
 
+  @mixin mediumScreen {
+    padding-top: 12px;
+  }
+
+  &__links { /* ul element */
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+
   &__logo {
-    position: absolute;
-    top: 0;
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-top: 5px;
+    float: left;
   }
 
   &__links, &__logo {
     a {
       color: #FFF;
       text-decoration: none;
-      display: block;
+      list-style-type: none;
       padding: 5px 8px;
       font-size: 1.2rem;
       &:hover, &:focus {
         color: $mainYellow;
-      }
-      @mixin mediumScreen {
-        padding: 12px 0;
       }
     }
   }

@@ -2,31 +2,34 @@ doctype html
 html(lang='en')
 
   head
-    title Greg Holden 
+    title Greg Holden
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet' href='assets/styles/styles.css')
-    script(src="/temp/scripts/Vendor.js")
 
   body#top
     header.container
-      // Navigation Bar 
-      nav.primary-nav
-        // Site Logo
+      // Navigation Bar
+      nav.primary-nav#navbar
+        // Logo
         div.primary-nav__logo
-          a(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
+          a#logo(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
         
-        // Nav Links
-        ul.primary-nav__links
+        ul.primary-nav__links 
+          // Mobile Menu Button
+          a#icon(href='javascript:void(0)') &#9776;
+          
+          // Nav Links
           li
-            a#contact-link(href='#contact') Contact
+            a#about-link(href='#about') About Me
           li
             a#portfolio-link(href='#portfolio') Portfolio
           li
-            a#about-link(href='#about') About Me
-
+            a#contact-link(href='#contact') Contact
+          
+          
     // Jumbotron/Header
-    div.jumbotron
+    div.wrapper.jumbotron
       // Title
       h1.title.title--main.title--white Greg Holden
       hr
@@ -34,13 +37,13 @@ html(lang='en')
       h3.title__subtitle Web Developer
       // Social Media Links
       div.title__subtitle__links
-        a(href='https://github.com/gregrholden')
+        a(href='https://github.com/gregrholden' target='_blank')
           i.fa.fa-github-square(aria-hidden='false')
-        a(href='https://twitter.com/ifDevReturnTrue')
+        a(href='https://twitter.com/ifDevReturnTrue' target='_blank')
           i.fa.fa-twitter-square(aria-hidden='false')
-        a(href='https://www.facebook.com/gregrholden')
+        a(href='https://www.facebook.com/gregrholden' target='_blank')
           i.fa.fa-facebook-official(aria-hidden='false')
-        a(href='https://www.linkedin.com/in/gregrholden')
+        a(href='https://www.linkedin.com/in/gregrholden' target='_blank')
           i.fa.fa-linkedin-square(aria-hidden='false')
 
     // About Me Section
@@ -63,25 +66,46 @@ html(lang='en')
     // Portfolio
     div.wrapper.wrapper--blue#portfolio
       h1.title.title--white Portfolio
-      div.row
-        div.col--left
-          img.img-responsive.rounded(src='' alt='')
-          img.img-responsive.rounded(src='' alt='')
-        div.col--right
-          img.img-responsive.rounded(src='' alt='')
-          img.img-responsive.rounded(src='' alt='')
+      div.portfolio
+        div.col--third
+          a(href='#portfolio' title='Digitalization Project Site for nonprofit')
+            img.portfolio__img(src='/assets/images/digitalization-IRI.jpg' alt='Digitalization Project Site for nonprofit')
+        div.col--third
+          a(href='#portfolio' title='Site for Painter Lilach Cohen-Holden')
+            img.portfolio__img(src='/assets/images/lilach-artist-site.jpg' alt='Site for Painter Lilach Cohen-Holden')
+        div.col--third
+          a(href='#portfolio' title='Site for research meeting for nonprofit')
+            img.portfolio__img(src='/assets/images/research-remix-IRI.jpg' alt='Site for research meeting for nonprofit')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/zdGqjq/' target='_blank' title='Pomodoro Clock App')
+            img.portfolio__img(src='/assets/images/pomodoro-clock.png' alt='Pomodoro Clock App')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/owVZVv/' target='_blank' title='JavaScript Calculator App')
+            img.portfolio__img(src='/assets/images/calculator.png' alt='JavaScript Calculator App')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/VWzQwd/' target='_blank' title='Local Weather App')  
+            img.portfolio__img(src='/assets/images/local-weather.jpg' alt='Local Weather App')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/ZyRzKR/' target='_blank' title='Twitch TV Stream App')
+            img.portfolio__img(src='/assets/images/twitch-streams.png' alt='Twitch TV Stream App')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/YQOJgo/' target='_blank' title='Wikipedia Viewer App')
+            img.portfolio__img(src='/assets/images/wiki-viewer.png' alt='Wikipedia Viewer App')
+        div.col--third
+          a(href='https://codepen.io/gregrholden/full/OgpZGM/' target='_blank' title='Random Quote Generator App')
+            img.portfolio__img(src='/assets/images/random-quote-generator.png' alt='Random Quote Generator App')
     
     // My Location & Contact Form
     div.wrapper#contact
       h1.title Contact
-      div.row
+      div.row.contact-and-map-area
         div#map-canvas.col--left
         script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' type='text/javascript')
-        div.col--right
+        div.col--right.contact-form
           form(
             action="mailto:gregrholden@gmail.com"
             method="POST"
-            name="contat-form"
+            name="contact-form"
             )
             div.form-group
             input(
@@ -90,24 +114,29 @@ html(lang='en')
               id='fname'
               placeholder="First Name"
               )
+            br
             input(
               type='text'
               class='form-control'
               id='lname'
               placeholder="Last Name"
               )
+            br
             input(
               type='email'
               class='form-control'
               id='email'
               placeholder="Email"
+              required
               )
+            br
             input(
               type='tel'
               class='form-control'
               id='phone'
               placeholder="Phone Number"
               )
+            br
             input(
               type='submit'
               class='btn btn-primary'
@@ -116,12 +145,12 @@ html(lang='en')
               )
                 
     // Footer
-    footer
-      div.col__copyright
+    footer.footer
+      div.footer__copyright
         p &copy; Greg Holden 2017
-      div.col__footer-logo
+      div.footer__logo
         p: a(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
-      div.col__sm-icons
+      div.footer__sm-icons
         a(href='https://github.com/gregrholden')
           i.fa.fa-github-square(aria-hidden='false')
         a(href='https://twitter.com/ifDevReturnTrue')
@@ -133,3 +162,12 @@ html(lang='en')
     
     
     script(src="/assets/scripts/App.js")
+    
+    // scrollReveal.js
+    // Issues exist with integrating ScrollReveal.js with webpack
+    // which is why I chose to include it in a script tag on this page
+    script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
+    script
+      | window.sr = ScrollReveal();
+      | sr.reveal('.portfolio__img');
+      | sr.reveal('.about-article__img');

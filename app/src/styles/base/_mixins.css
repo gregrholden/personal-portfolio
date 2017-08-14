@@ -16,8 +16,14 @@
   }
 }
 
-@define-mixin fullScreen {
+@define-mixin XLScreen {
   @media (min-width: 1215px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin fullScreen {
+  @media (min-width: 1451px) {
     @mixin-content;
   }
 }

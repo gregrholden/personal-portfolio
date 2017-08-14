@@ -2,6 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: $mainBlue;
   margin: 0;
+  min-width: 410px;
 }
 
 img {
@@ -11,10 +12,12 @@ img {
 
 a {
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 hr {
-  background-color: $lightBlue;
+  border: 1px solid $lightBlue;
 }
 
 * {

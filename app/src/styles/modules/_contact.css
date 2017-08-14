@@ -11,3 +11,35 @@
     }
   }
 }
+.contact-and-map-area {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.contact-form {
+  display: block;
+  width: 351px;
+  margin: 0 auto;
+  form {
+    input {
+      padding: 2px;
+    }
+    @mixin mediumScreen {
+      position: absolute;
+      left: 60%;
+      input {
+        width: 250px;
+        &#submit {
+          width: 150px;
+        }
+      }
+    }
+    @mixin largeScreen {
+      input {
+        width: 350px;
+      }
+    }
+    @mixin XLScreen {
+      left: 52%;
+    }
+  }
+}

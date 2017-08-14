@@ -10338,6 +10338,18 @@ var _map = __webpack_require__(2);
 
 var _map2 = _interopRequireDefault(_map);
 
+var _scroll = __webpack_require__(3);
+
+var _scroll2 = _interopRequireDefault(_scroll);
+
+var _mobileMenu = __webpack_require__(4);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _pageResize = __webpack_require__(5);
+
+var _pageResize2 = _interopRequireDefault(_pageResize);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
@@ -10363,7 +10375,7 @@ if ((0, _jquery2.default)('#map-canvas')) {
     zoom: 9,
     center: myLatlng,
     scrollwheel: false,
-    draggable: false,
+    draggable: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   // Attach map to DOM
@@ -10374,6 +10386,125 @@ if ((0, _jquery2.default)('#map-canvas')) {
     map: map
   });
 }
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// jQuery Smooth Scrolling Feature
+// Select all links with hashes
+(0, _jquery2.default)('a[href*="#"]').click(function (event) {
+  // Links
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    // Find element to scroll to
+    var target = (0, _jquery2.default)(this.hash);
+    target = target.length ? target : (0, _jquery2.default)('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Prevent default if smooth-scroll will happen
+      event.preventDefault();
+      (0, _jquery2.default)('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function () {
+        // Callback after animation
+        // Change focus
+        var $target = (0, _jquery2.default)(target);
+        $target.focus();
+        if ($target.is(":focus")) {
+          // Checking if target focused
+          return false;
+        } else {
+          $target.attr('tabindex', '-1'); // Add tabindex for non-focusable elems
+          $target.focus(); // Re-set focus
+        };
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)('#icon').on('click', function () {
+  if ((0, _jquery2.default)('.primary-nav').hasClass('visibleMenu')) {
+    (0, _jquery2.default)('#icon').removeClass('visibleMenu');
+    (0, _jquery2.default)('.primary-nav li').css({
+      "display": "none",
+      "float": "left",
+      "margin-right": "25px"
+    });
+  } else {
+    (0, _jquery2.default)('.primary-nav').addClass('visibleMenu');
+    (0, _jquery2.default)('.primary-nav li').css({
+      "float": "none",
+      "margin-right": "100px",
+      "display": "inline"
+    });
+    (0, _jquery2.default)('.primary-nav li a').css({
+      "display": "block"
+    });
+  }
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Reset navbar when viewport is resized
+(0, _jquery2.default)(window).on("load, resize", function viewUpdate() {
+  var viewportWidth = (0, _jquery2.default)(window).width();
+  if (viewportWidth < 768) {
+    (0, _jquery2.default)('.primary-nav').removeClass('visibleMenu');
+    (0, _jquery2.default)('.primary-nav li').css({
+      "display": "none",
+      "margin-right": "25px"
+    });
+    (0, _jquery2.default)('.primary-nav #icon').css({
+      "position": "absolute",
+      "right": "0",
+      "font-size": "1.25rem",
+      "display": "block",
+      "margin-right": "25px"
+    });
+  } else if (viewportWidth > 767) {
+    (0, _jquery2.default)('.primary-nav').removeClass('visibleMenu');
+    (0, _jquery2.default)('.primary-nav li').css({
+      "display": "inline",
+      "float": "left",
+      "margin-right": "25px"
+    });
+    (0, _jquery2.default)('.primary-nav li a').css("display", "block");
+    (0, _jquery2.default)('.primary-nav #icon').css("display", "none");
+  }
+});
 
 /***/ })
 /******/ ]);
