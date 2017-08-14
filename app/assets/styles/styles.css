@@ -393,6 +393,7 @@ hr {
   text-align: center;
 }
 .small {
+  font-size: 16px;
   font-size: 1rem;
   padding-top: 16px;
 }
@@ -508,7 +509,7 @@ hr {
     }
   }
 .container .primary-nav {
-  background-color: rgba(48,109,132, 1);
+  background-color: rgba(48, 109, 132, 1);
   z-index: 10;
 }
 .primary-nav {
@@ -535,6 +536,7 @@ hr {
     position: absolute;
     right: 0;
     display: block;
+    font-size: 20px;
     font-size: 1.25rem;
     margin-right: 25px;
   }
@@ -563,6 +565,7 @@ hr {
       text-decoration: none;
       list-style-type: none;
       padding: 5px 8px;
+      font-size: 19.2px;
       font-size: 1.2rem;
     }
 .primary-nav__links a:hover, .primary-nav__links a:focus, .primary-nav__logo a:hover, .primary-nav__logo a:focus {
@@ -571,11 +574,13 @@ hr {
 .title {
   color: #333;
   text-align: center;
+  font-size: 53.28px;
   font-size: 3.33rem;
   margin-bottom: 25px;
   font-weight: 400;
 }
 .title--main {
+    font-size: 60px;
     font-size: 3.75rem;
   }
 .title--white {
@@ -583,6 +588,7 @@ hr {
   }
 .title__subtitle {
     text-align: center;
+    font-size: 32px;
     font-size: 2rem;
     font-weight: 300;
   }
@@ -606,6 +612,7 @@ hr {
 .jumbotron i {
     margin-top: 3px;
     padding: 2.5px;
+    font-size: 28px;
     font-size: 1.75rem;
   }
 .jumbotron a {
@@ -621,6 +628,7 @@ hr {
   width: 100%;
 }
 .about-article {
+  font-size: 16px;
   font-size: 1rem;
   margin-left: 15px;
   margin-right: 15px;
@@ -706,6 +714,7 @@ hr {
   }
 #contact form input {
       margin: 15px 0;
+      font-size: 26px;
       font-size: 1.625rem;
     }
 #contact form input:first-child {
@@ -747,6 +756,7 @@ hr {
   }
 .footer {
   padding: 50px 0;
+  font-size: 32px;
   font-size: 2rem;
   background-color: #306D84;
 }
@@ -761,6 +771,7 @@ hr {
         color: #D39047;
       }
 .footer__copyright {
+    font-size: 16px;
     font-size: 1rem;
     width: 33%;
     float: left;
