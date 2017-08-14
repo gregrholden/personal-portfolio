@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
 imagemin = require('gulp-imagemin'),
 del = require('del'),
 usemin = require('gulp-usemin'),
@@ -26,6 +26,7 @@ gulp.task('copyGeneralFiles', ['deleteDocsFolder'], function() {
   var pathsToCopy = [
     './app/**/*',
     '!./app/index.html',
+    '!./app/assets/**',
     '!./app/assets/images/**',
     '!./app/assets/styles/**',
     '!./app/assets/scripts/**',
@@ -34,17 +35,15 @@ gulp.task('copyGeneralFiles', ['deleteDocsFolder'], function() {
   ]
 
   return gulp.src(pathsToCopy)
-    .pipe(gulp.dest('./docs'))
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('optimizeImages', ['deleteDocsFolder'], function() {
   return gulp.src(['./app/assets/images/**/*'])
     .pipe(imagemin({
-      progressive: true,
-      interlaced: true,
-      multipass: true
+      progressive: true
     }))
-    .pipe(gulp.dest('./docs/assets/images'))
+    .pipe(gulp.dest('./docs/assets/images'));
 });
 
 gulp.task('useminTrigger', ['deleteDocsFolder'], function() {

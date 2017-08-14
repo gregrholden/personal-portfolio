@@ -5,15 +5,15 @@ html(lang='en')
     title Greg Holden
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    // build:css src/styles/styles.css
+    // build:css assets/styles/styles.css
     link(rel='stylesheet' href='assets/styles/styles.css')
     // endbuild
-  body#top 
+  body#top
     header.container
       // Navigation Bar
       nav.primary-nav#navbar
         // Logo
-        div.primary-nav__logo
+        div.primary-nav__logo 
           a#logo(href='#top') Greg #[i.fa.fa-code(aria-hidden='true')]
         
         ul.primary-nav__links 
@@ -67,34 +67,34 @@ html(lang='en')
     // Portfolio
     div.wrapper.wrapper--blue#portfolio
       h1.title.title--white Portfolio
-      div.portfolio
+      div.portfolio 
         div.col--third
           a(href='#portfolio' title='Digitalization Project Site for nonprofit')
-            img.portfolio__img(src='/assets/images/digitalization-IRI.jpg' alt='Digitalization Project Site for nonprofit')
+            img.portfolio__img(src='assets/images/digitalization-IRI.jpg' alt='Digitalization Project Site for nonprofit')
         div.col--third
           a(href='#portfolio' title='Site for Painter Lilach Cohen-Holden')
-            img.portfolio__img(src='/assets/images/lilach-artist-site.jpg' alt='Site for Painter Lilach Cohen-Holden')
+            img.portfolio__img(src='assets/images/lilach-artist-site.jpg' alt='Site for Painter Lilach Cohen-Holden')
         div.col--third
           a(href='#portfolio' title='Site for research meeting for nonprofit')
-            img.portfolio__img(src='/assets/images/research-remix-IRI.jpg' alt='Site for research meeting for nonprofit')
+            img.portfolio__img(src='assets/images/research-remix-IRI.jpg' alt='Site for research meeting for nonprofit')
         div.col--third
           a(href='https://codepen.io/gregrholden/full/zdGqjq/' target='_blank' title='Pomodoro Clock App')
-            img.portfolio__img(src='/assets/images/pomodoro-clock.png' alt='Pomodoro Clock App')
+            img.portfolio__img(src='assets/images/pomodoro-clock.png' alt='Pomodoro Clock App')
         div.col--third
           a(href='https://codepen.io/gregrholden/full/owVZVv/' target='_blank' title='JavaScript Calculator App')
-            img.portfolio__img(src='/assets/images/calculator.png' alt='JavaScript Calculator App')
+            img.portfolio__img(src='assets/images/calculator.png' alt='JavaScript Calculator App') 
         div.col--third
           a(href='https://codepen.io/gregrholden/full/VWzQwd/' target='_blank' title='Local Weather App')  
-            img.portfolio__img(src='/assets/images/local-weather.jpg' alt='Local Weather App')
+            img.portfolio__img(src='assets/images/local-weather.jpg' alt='Local Weather App')
         div.col--third
           a(href='https://codepen.io/gregrholden/full/ZyRzKR/' target='_blank' title='Twitch TV Stream App')
-            img.portfolio__img(src='/assets/images/twitch-streams.png' alt='Twitch TV Stream App')
+            img.portfolio__img(src='assets/images/twitch-streams.png' alt='Twitch TV Stream App')
         div.col--third
           a(href='https://codepen.io/gregrholden/full/YQOJgo/' target='_blank' title='Wikipedia Viewer App')
-            img.portfolio__img(src='/assets/images/wiki-viewer.png' alt='Wikipedia Viewer App')
+            img.portfolio__img(src='assets/images/wiki-viewer.png' alt='Wikipedia Viewer App')
         div.col--third
           a(href='https://codepen.io/gregrholden/full/OgpZGM/' target='_blank' title='Random Quote Generator App')
-            img.portfolio__img(src='/assets/images/random-quote-generator.png' alt='Random Quote Generator App')
+            img.portfolio__img(src='assets/images/random-quote-generator.png' alt='Random Quote Generator App')
     
     // My Location & Contact Form
     div.wrapper#contact
@@ -146,7 +146,7 @@ html(lang='en')
               )
                 
     // Footer
-    footer.footer
+    footer.footer 
       div.footer__copyright
         p &copy; Greg Holden 2017
       div.footer__logo
@@ -161,8 +161,8 @@ html(lang='en')
         a(href='https://www.linkedin.com/in/gregrholden')
           i.fa.fa-linkedin-square(aria-hidden='false')
     
-    // build:js src/scripts/App.js
-    script(src="/assets/scripts/App.js")
+    // build:js assets/scripts/App.js
+    script(src="assets/scripts/App.js")
     // endbuild
     
     // scrollReveal.js
